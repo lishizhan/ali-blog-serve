@@ -20,11 +20,22 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    /**
+     * 查询热门文章
+     * @return
+     */
     @GetMapping("/hotArticleList")
     public ResponseResult ArticleListHot(){
         return articleService.articleListHot();
     }
 
+    /**
+     * 分页查询文章列表
+     */
+    @GetMapping("/articleList")
+    public ResponseResult articleList(Integer pageNum,Integer pageSize,Long categoryId){
+        return articleService.articleList(pageNum,pageSize,categoryId);
+    }
 
 
 }

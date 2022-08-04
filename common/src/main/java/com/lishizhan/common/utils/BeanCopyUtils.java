@@ -35,4 +35,5 @@ public class BeanCopyUtils {
                 .map(o -> copyBean(o, clazz))
                 .collect(Collectors.toList());
     }
+
 }

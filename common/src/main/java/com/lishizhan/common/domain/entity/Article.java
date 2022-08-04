@@ -3,16 +3,19 @@ package com.lishizhan.common.domain.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  * 
  * @TableName ali_article
  */
 @Data
+@Accessors(chain = true)  //该配置是setXXX时返回该对象
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName(value = "ali_article")
@@ -46,6 +49,9 @@ public class Article implements Serializable {
      * 所属分类ID
      */
     private Long categoryId;
+    /*分类名称*/
+    @TableField(exist = false)
+    private String categoryName;
 
     /**
      * 缩略图

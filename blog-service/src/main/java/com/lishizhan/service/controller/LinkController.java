@@ -30,6 +30,11 @@ public class LinkController {
         return linkService.getAllLink();
     }
 
+    @GetMapping("test")
+    public ResponseResult test(){
+        return ResponseResult.okResult("test接口访问成功！！！");
+    }
+
 
 
 }

@@ -23,7 +23,7 @@ spring:
     port: 6379
     password: lsz!@#$redis
     timeout: 60000
-    database: 1
+    database: 2
 #  mvc:
 #    static-path-pattern: /static/**
 # 日志打印

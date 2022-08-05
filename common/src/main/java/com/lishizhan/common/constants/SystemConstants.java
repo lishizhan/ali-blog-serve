@@ -41,5 +41,11 @@ public class SystemConstants {
     public static final int HOT_ARTICLE_SIZE = 10;
 
 
+    /**
+     * 登陆请求头
+     * */
+    public static final String JWT_TOKEN = "token";
+
+
 
 }
